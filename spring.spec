@@ -1,12 +1,11 @@
-%define	subver	b5
 Summary:	Powerful RTS engine
 Name:		spring
-Version:	0.77
-Release:	0.%{subver}.1
+Version:	0.78.2.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games/Strategy
-Source0:	http://spring.clan-sy.com/dl/%{name}_%{version}%{subver}_src.tar.bz2
-# Source0-md5:	3d2c3c879e4d07c1c2ca8c5181bf0a45
+Source0:	http://spring.clan-sy.com/dl/%{name}_%{version}_src.tar.gz
+# Source0-md5:	8f3dd6c79b254fde9c1b6643eca97729
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.6.8-0.rc2
 BuildRequires:	OpenAL-devel
@@ -42,7 +41,7 @@ Features:
 - Frequent additions and bugfixes.
 
 %prep
-%setup -q -n %{name}_%{version}%{subver}
+%setup -q -n %{name}_%{version}
 
 %build
 %cmake \
