@@ -1,11 +1,15 @@
+#
+# TODO: check unpackaged files
+#
 Summary:	Powerful RTS engine
+Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.78.2.1
+Version:	0.79.1.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games/Strategy
 Source0:	http://spring.clan-sy.com/dl/%{name}_%{version}_src.tar.gz
-# Source0-md5:	8f3dd6c79b254fde9c1b6643eca97729
+# Source0-md5:	408b0359a43ae2a34798a6f41fe6f82a
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.6.8-0.rc2
 BuildRequires:	OpenAL-devel
@@ -39,6 +43,26 @@ Features:
 - An extremely powerful GUI, designed to minimize unnecessary
   micromanagement.
 - Frequent additions and bugfixes.
+
+%description -l pl.UTF-8
+Potężny silnik RTS.
+
+Funkcje:
+- Wielkie bitwy ograniczone tylko mocą komputera; obsługa do 5000
+  jednostek.
+- Wielkie, szczegółowe mapy w których można przeprowadzać bitwy,
+  w pełni trójwymiarowy teren, pożary lasów, dynamiczna i
+  refleksyjna pogoda oraz definiowalne przez użytkownika chmury.
+- Kilka trybów kamery, umożliwiające oglądanie każdego elementu
+  prawie pod każdym kątem.
+- W pełni trójwymiarowe walki na lądzie, morzu i w powietrzu,
+  realistyczne trajketorie pocisków (zachowane prawa fizyki).
+- Wiele przeróżnych gier, stworzonych wyłącznie dla Springa.
+- Złożone systemy sztucznej inteligencji, niektóre z nich są
+  całkiem dobre.
+- Ekstremalnie potężne GUI, zaprojektowane w celu zminimalizowania
+  niepotrzebnego mikrozarządzania.
+- Często wypuszczane dodtaki oraz poprawki.
 
 %prep
 %setup -q -n %{name}_%{version}
