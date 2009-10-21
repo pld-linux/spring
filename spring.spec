@@ -19,6 +19,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	glew-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
+BuildRequires:	p7zip
 BuildRequires:	python-devel
 BuildRequires:	rpm-javaprov
 BuildRequires:	xorg-lib-libX11-devel
