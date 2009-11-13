@@ -4,12 +4,12 @@
 Summary:	Powerful RTS engine
 Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.80.5.1
+Version:	0.80.5.2
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
-Source0:	http://dl.sourceforge.net/springrts/spring-0.80.5/%{name}_%{version}_src.tar.gz
-# Source0-md5:	34a80c08faaea56021b317ab2678dbc1
+Source0:	http://downloads.sourceforge.net/springrts/spring-0.80.5/%{name}_%{version}_src.tar.gz
+# Source0-md5:	169b74ae3d3c66c72381690a3f87eb67
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.6.8-0.rc2
 BuildRequires:	OpenAL-devel
@@ -51,16 +51,16 @@ Potężny silnik RTS.
 Funkcje:
 - Wielkie bitwy ograniczone tylko mocą komputera; obsługa do 5000
   jednostek.
-- Wielkie, szczegółowe mapy w których można przeprowadzać bitwy,
-  w pełni trójwymiarowy teren, pożary lasów, dynamiczna i
-  refleksyjna pogoda oraz definiowalne przez użytkownika chmury.
-- Kilka trybów kamery, umożliwiające oglądanie każdego elementu
-  prawie pod każdym kątem.
+- Wielkie, szczegółowe mapy w których można przeprowadzać bitwy, w
+  pełni trójwymiarowy teren, pożary lasów, dynamiczna i refleksyjna
+  pogoda oraz definiowalne przez użytkownika chmury.
+- Kilka trybów kamery, umożliwiające oglądanie każdego elementu prawie
+  pod każdym kątem.
 - W pełni trójwymiarowe walki na lądzie, morzu i w powietrzu,
   realistyczne trajketorie pocisków (zachowane prawa fizyki).
 - Wiele przeróżnych gier, stworzonych wyłącznie dla Springa.
-- Złożone systemy sztucznej inteligencji, niektóre z nich są
-  całkiem dobre.
+- Złożone systemy sztucznej inteligencji, niektóre z nich są całkiem
+  dobre.
 - Ekstremalnie potężne GUI, zaprojektowane w celu zminimalizowania
   niepotrzebnego mikrozarządzania.
 - Często wypuszczane dodtaki oraz poprawki.
