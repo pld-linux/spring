@@ -13,6 +13,7 @@ Source0:	http://downloads.sourceforge.net/springrts/spring-0.80.5/%{name}_%{vers
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.6.8-0.rc2
 BuildRequires:	OpenAL-devel
+BuildRequires:	SDL-devel
 BuildRequires:	boost-devel >= 1.34
 BuildRequires:	cmake >= 1.6
 BuildRequires:	freetype-devel
@@ -22,7 +23,9 @@ BuildRequires:	libvorbis-devel
 BuildRequires:	p7zip
 BuildRequires:	python-devel
 BuildRequires:	rpm-javaprov
+BuildRequires:	which
 BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
