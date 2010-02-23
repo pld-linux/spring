@@ -21,8 +21,6 @@ BuildRequires:	glew-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	p7zip
-BuildRequires:	python-devel
-BuildRequires:	rpm-javaprov
 BuildRequires:	which
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcursor-devel
