@@ -4,14 +4,14 @@
 Summary:	Powerful RTS engine
 Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.81.1.3
+Version:	0.81.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
 Source0:	http://downloads.sourceforge.net/springrts/spring-0.80.5/%{name}_%{version}_src.tar.gz
-# Source0-md5:	8ed06d31fcfe5b5373afcc7c7beddf73
+# Source0-md5:	d7e3b7c29e2375d94b6ab78dd83f2b8c
 URL:		http://spring.clan-sy.com/
-BuildRequires:	DevIL-devel >= 1.6.8-0.rc2
+BuildRequires:	DevIL-devel >= 1.7.2-4
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel
 BuildRequires:	boost-devel >= 1.34
