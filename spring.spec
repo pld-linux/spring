@@ -14,12 +14,15 @@ URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.7.2-4
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel
+BuildRequires:	asciidoc
 BuildRequires:	boost-devel >= 1.34
 BuildRequires:	cmake >= 1.6
+BuildRequires:	docbook-dtd45-xml
 BuildRequires:	freetype-devel
 BuildRequires:	glew-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
+BuildRequires:	libxslt-progs
 BuildRequires:	p7zip
 BuildRequires:	which
 BuildRequires:	xorg-lib-libX11-devel
