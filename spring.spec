@@ -4,12 +4,13 @@
 Summary:	Powerful RTS engine
 Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.81.2.1
+Version:	0.82.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
-Source0:	http://downloads.sourceforge.net/springrts/spring-0.80.5/%{name}_%{version}_src.tar.gz
-# Source0-md5:	da6732a3c9930872955004a67573ca67
+Source0:	http://downloads.sourceforge.net/springrts/%{name}_%{version}_src.tar.gz
+# Source0-md5:	893a937bfc839a63183b1a142e03fa0b
+Patch0:		%{name}-sdl.patch
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.7.2-4
 BuildRequires:	OpenAL-devel
@@ -71,18 +72,22 @@ Funkcje:
 
 %prep
 %setup -q -n %{name}_%{version}
+%patch0 -p1
 
 %build
-%cmake \
+install -d build
+cd build
+%cmake .. \
+	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DLIBDIR=%{_lib} \
-	.
+	-DLIBDIR=%{_lib}
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -92,8 +97,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(755,root,root) %{_bindir}/%{name}-dedicated
+%attr(755,root,root) %{_bindir}/spring-headless
+%attr(755,root,root) %{_bindir}/spring-multithreaded
 %attr(755,root,root) %{_libdir}/libspringserver.so
-%attr(755,root,root) %{_libdir}/libunitsync.so
+#%%attr(755,root,root) %{_libdir}/libunitsync.so
 %{_datadir}/games/%{name}
 %{_datadir}/mime/packages/%{name}.xml
 %{_mandir}/man6/spring*.6*
