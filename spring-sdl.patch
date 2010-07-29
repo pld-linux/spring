@@ -1,0 +1,723 @@
+--- spring_0.82.0/rts/builds/DS/main.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/builds/DS/main.cpp	2010-07-28 13:56:55.753882188 +0200
+@@ -4,7 +4,7 @@
+ 
+ #include <string>
+ #include <iostream>
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ #include <stdlib.h>
+ 
+ #ifdef _WIN32
+--- spring_0.82.0/rts/Sim/Units/COB/UnitScript.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Sim/Units/COB/UnitScript.cpp	2010-07-28 13:56:55.767202310 +0200
+@@ -10,7 +10,7 @@
+ 
+ #ifndef _CONSOLE
+ 
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ #include "Game/GameHelper.h"
+ #include "LogOutput.h"
+ #include "Map/Ground.h"
+--- spring_0.82.0/rts/Sim/Units/Groups/GroupHandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Sim/Units/Groups/GroupHandler.cpp	2010-07-28 13:55:30.527231905 +0200
+@@ -14,7 +14,7 @@
+ #include "Platform/SharedLib.h"
+ #include "Platform/errorhandler.h"
+ #include "FileSystem/FileSystem.h"
+-#include "SDL_keysym.h"
++#include "SDL/SDL_keysym.h"
+ #include "mmgr.h"
+ #include <boost/cstdint.hpp>
+ 
+--- spring_0.82.0/rts/Menu/SelectMenu.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Menu/SelectMenu.cpp	2010-07-28 13:56:55.770535558 +0200
+@@ -5,8 +5,8 @@
+ #endif
+ #include "SelectMenu.h"
+ 
+-#include <SDL_keysym.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_timer.h>
+ #include <boost/bind.hpp>
+ #include <sstream>
+ #ifndef _WIN32
+--- spring_0.82.0/rts/Game/AviVideoCapturing.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/AviVideoCapturing.cpp	2010-07-28 13:56:55.770535558 +0200
+@@ -14,8 +14,8 @@
+ #include "Rendering/GlobalRendering.h"
+ #include "Rendering/AVIGenerator.h"
+ #include "lib/streflop/streflop_cond.h"
+-#include <SDL_mouse.h>
+-#include <SDL_events.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_events.h>
+ 
+ #include <string>
+ 
+--- spring_0.82.0/rts/Game/WaitCommandsAI.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/WaitCommandsAI.cpp	2010-07-28 13:56:55.777202318 +0200
+@@ -3,7 +3,7 @@
+ #include "StdAfx.h"
+ #include "mmgr.h"
+ 
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ #include "WaitCommandsAI.h"
+ #include "SelectedUnits.h"
+ #include "Sim/Misc/TeamHandler.h"
+--- spring_0.82.0/rts/Game/Game.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Game.cpp	2010-07-28 13:56:55.813034859 +0200
+@@ -12,11 +12,11 @@
+ #include <boost/thread/thread.hpp>
+ #include <boost/bind.hpp>
+ 
+-#include <SDL_keyboard.h>
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
+-#include <SDL_events.h>
++#include <SDL/SDL_keyboard.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
++#include <SDL/SDL_events.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Game/SelectedUnits.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/SelectedUnits.cpp	2010-07-28 13:56:55.816368726 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "StdAfx.h"
+ #include <map>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Game/UI/GuiHandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/GuiHandler.cpp	2010-07-28 13:55:30.553877695 +0200
+@@ -9,8 +9,8 @@
+ #include "mmgr.h"
+ 
+ #include "GuiHandler.h"
+-#include "SDL_keysym.h"
+-#include "SDL_mouse.h"
++#include "SDL/SDL_keysym.h"
++#include "SDL/SDL_mouse.h"
+ #include "CommandColors.h"
+ #include "KeyBindings.h"
+ #include "KeyCodes.h"
+--- spring_0.82.0/rts/Game/UI/ShareBox.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/ShareBox.cpp	2010-07-28 13:56:55.819702271 +0200
+@@ -1,7 +1,7 @@
+ /* This file is part of the Spring engine (GPL v2 or later), see LICENSE.html */
+ 
+ #include "StdAfx.h"
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ #include "mmgr.h"
+ 
+ #include "ShareBox.h"
+--- spring_0.82.0/rts/Game/UI/KeyBindings.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/KeyBindings.cpp	2010-07-28 13:55:30.560544117 +0200
+@@ -9,7 +9,7 @@
+ #include "mmgr.h"
+ 
+ #include "KeyBindings.h"
+-#include "SDL_keysym.h"
++#include "SDL/SDL_keysym.h"
+ #include "KeyCodes.h"
+ #include "KeySet.h"
+ #include "SelectionKeyHandler.h"
+--- spring_0.82.0/rts/Game/UI/KeyCodes.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/KeyCodes.cpp	2010-07-28 13:55:30.560544117 +0200
+@@ -6,7 +6,7 @@
+ #include "mmgr.h"
+ 
+ #include "KeyCodes.h"
+-#include "SDL_keysym.h"
++#include "SDL/SDL_keysym.h"
+ #include "LogOutput.h"
+ #include "Util.h"
+ 
+--- spring_0.82.0/rts/Game/UI/QuitBox.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/QuitBox.cpp	2010-07-28 13:56:55.823035585 +0200
+@@ -1,7 +1,7 @@
+ /* This file is part of the Spring engine (GPL v2 or later), see LICENSE.html */
+ 
+ #include "StdAfx.h"
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ #include "mmgr.h"
+ 
+ #include "Sim/Misc/TeamHandler.h"
+--- spring_0.82.0/rts/Game/UI/KeySet.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/KeySet.cpp	2010-07-28 13:55:30.563877396 +0200
+@@ -7,7 +7,7 @@
+ 
+ #include "KeySet.h"
+ #include "KeyCodes.h"
+-#include "SDL_keysym.h"
++#include "SDL/SDL_keysym.h"
+ 
+ #include "LogOutput.h"
+ #include "Util.h"
+--- spring_0.82.0/rts/Game/UI/GameInfo.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/GameInfo.cpp	2010-07-28 13:56:55.823035585 +0200
+@@ -3,7 +3,7 @@
+ #include "StdAfx.h"
+ #include <string>
+ #include <vector>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ #include <cstdio>
+ 
+ #include "mmgr.h"
+--- spring_0.82.0/rts/Game/UI/GameSetupDrawer.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/GameSetupDrawer.cpp	2010-07-28 13:56:55.826368959 +0200
+@@ -5,8 +5,8 @@
+ #include <assert.h>
+ #include <string>
+ #include <map>
+-#include <SDL_timer.h>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_timer.h>
++#include <SDL/SDL_keysym.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Game/UI/HwMouseCursor.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/HwMouseCursor.cpp	2010-07-28 13:56:55.829702255 +0200
+@@ -31,7 +31,7 @@
+ #include "myMath.h"
+ #include <cstring> // for memset
+ 
+-#include <SDL_syswm.h>
++#include <SDL/SDL_syswm.h>
+ #endif
+ 
+ 
+--- spring_0.82.0/rts/Game/UI/LuaUI.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/LuaUI.cpp	2010-07-28 13:56:55.836368522 +0200
+@@ -11,9 +11,9 @@
+ #include <stdio.h>
+ #include <set>
+ #include <cctype>
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Game/UI/MiniMap.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/MiniMap.cpp	2010-07-28 13:56:55.846368375 +0200
+@@ -1,8 +1,8 @@
+ /* This file is part of the Spring engine (GPL v2 or later), see LICENSE.html */
+ 
+ #include "StdAfx.h"
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
+ 
+ #include "lib/gml/ThreadSafeContainers.h"
+ 
+--- spring_0.82.0/rts/Game/UI/MouseHandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/MouseHandler.cpp	2010-07-28 13:56:55.853035048 +0200
+@@ -48,9 +48,9 @@
+ #include <boost/cstdint.hpp>
+ 
+ // can't be up there since those contain conflicting definitions
+-#include <SDL_mouse.h>
+-#include <SDL_events.h>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_events.h>
++#include <SDL/SDL_keysym.h>
+ 
+ 
+ //////////////////////////////////////////////////////////////////////
+--- spring_0.82.0/rts/Game/UI/SelectionKeyHandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/UI/SelectionKeyHandler.cpp	2010-07-28 13:56:55.856368633 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "StdAfx.h"
+ #include <fstream>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ #include "mmgr.h"
+ 
+ #include "Game/Camera/CameraController.h"
+--- spring_0.82.0/rts/Game/PreGame.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/PreGame.cpp	2010-07-28 13:56:55.859702129 +0200
+@@ -3,8 +3,8 @@
+ #include "StdAfx.h"
+ #include "Rendering/GL/myGL.h"
+ #include <map>
+-#include <SDL_keysym.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_timer.h>
+ #include <set>
+ #include <cfloat>
+ 
+--- spring_0.82.0/rts/Game/Camera/OverheadController.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Camera/OverheadController.cpp	2010-07-28 13:56:55.859702129 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "StdAfx.h"
+ #include "mmgr.h"
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ #include <boost/cstdint.hpp>
+ 
+ #include "OverheadController.h"
+--- spring_0.82.0/rts/Game/Camera/FreeController.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Camera/FreeController.cpp	2010-07-28 13:56:55.863035604 +0200
+@@ -1,7 +1,7 @@
+ /* This file is part of the Spring engine (GPL v2 or later), see LICENSE.html */
+ 
+ #include "StdAfx.h"
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Game/Camera/TWController.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Camera/TWController.cpp	2010-07-28 13:56:55.866368828 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "StdAfx.h"
+ 
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ 
+ #include "mmgr.h"
+ #include <boost/cstdint.hpp>
+--- spring_0.82.0/rts/Game/Camera/SmoothController.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Camera/SmoothController.cpp	2010-07-28 13:56:55.866368828 +0200
+@@ -2,8 +2,8 @@
+ 
+ #include "StdAfx.h"
+ #include "mmgr.h"
+-#include <SDL_keysym.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_timer.h>
+ #include <boost/cstdint.hpp>
+ 
+ #include "SmoothController.h"
+--- spring_0.82.0/rts/Game/Camera/OrbitController.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Camera/OrbitController.cpp	2010-07-28 13:56:55.869702287 +0200
+@@ -2,8 +2,8 @@
+ 
+ #include "StdAfx.h"
+ 
+-#include <SDL_mouse.h>
+-#include <SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_keysym.h>
+ 
+ #include "OrbitController.h"
+ #include "Game/Camera.h"
+--- spring_0.82.0/rts/Game/Player.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Game/Player.cpp	2010-07-28 13:56:55.869702287 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "StdAfx.h"
+ #include <assert.h>
+-#include <SDL_mouse.h>
++#include <SDL/SDL_mouse.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/System/GlobalUnsynced.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/GlobalUnsynced.cpp	2010-07-28 13:56:55.873035586 +0200
+@@ -18,7 +18,7 @@
+ 
+ #include <string>
+ #include <cassert>
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ 
+ 
+ /**
+--- spring_0.82.0/rts/System/myTime.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/myTime.h	2010-07-28 13:56:55.873035586 +0200
+@@ -5,7 +5,7 @@
+ 
+ #define SPRING_TIME 1 // boost microsec timer SUCKS atm, when it works again, set to 0
+ #if SPRING_TIME
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ typedef unsigned spring_time;
+ typedef int spring_duration;
+ inline spring_time spring_gettime() { return SDL_GetTicks(); };
+--- spring_0.82.0/rts/System/TimeProfiler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/TimeProfiler.cpp	2010-07-28 13:56:55.873035586 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "TimeProfiler.h"
+ 
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ #include <cstring>
+ 
+ #include "mmgr.h"
+--- spring_0.82.0/rts/System/Main.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Main.cpp	2010-07-28 13:56:55.873035586 +0200
+@@ -23,7 +23,7 @@
+ 
+ #include "SpringApp.h"
+ 
+-#include <SDL.h>     // Must come after Game/UI/MouseHandler.h for ButtonPressEvt
++#include <SDL/SDL.h>     // Must come after Game/UI/MouseHandler.h for ButtonPressEvt
+ 
+ #ifdef WIN32
+ #include "Platform/Win/win32.h"
+--- spring_0.82.0/rts/System/Platform/Win/wsdl.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Platform/Win/wsdl.h	2010-07-28 13:55:30.563877396 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include <windows.h>
+ 
+-#include "SDL_events.h"
++#include "SDL/SDL_events.h"
+ 
+ namespace wsdl
+ {
+--- spring_0.82.0/rts/System/Platform/Win/CrashHandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Platform/Win/CrashHandler.cpp	2010-07-28 13:56:55.876369243 +0200
+@@ -6,7 +6,7 @@
+ #include <process.h>
+ #include <imagehlp.h>
+ #include <signal.h>
+-#include <SDL.h> // for SDL_Quit
++#include <SDL/SDL.h> // for SDL_Quit
+ #include "CrashHandler.h"
+ #include "Game/GameVersion.h"
+ #include "LogOutput.h"
+--- spring_0.82.0/rts/System/Platform/Clipboard.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Platform/Clipboard.cpp	2010-07-28 13:56:55.876369243 +0200
+@@ -7,7 +7,7 @@
+ #elif defined(WIN32)
+ #  include <windows.h>
+ #else
+-#  include <SDL_syswm.h>
++#  include <SDL/SDL_syswm.h>
+ #endif
+ 
+ std::string CClipboard::GetContents() const
+--- spring_0.82.0/rts/System/Platform/errorhandler.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Platform/errorhandler.cpp	2010-07-28 13:56:55.879702396 +0200
+@@ -13,7 +13,7 @@
+ #include "Sound/ISound.h"
+ #endif
+ 
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ 
+ #if       !defined(DEDICATED) && !defined(HEADLESS)
+ #if       defined(WIN32)
+--- spring_0.82.0/rts/System/Sound/OggStream.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Sound/OggStream.cpp	2010-07-28 13:56:55.879702396 +0200
+@@ -2,7 +2,7 @@
+ 
+ #include "OggStream.h"
+ 
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ 
+ #include "FileSystem/FileHandler.h"
+ #include "LogOutput.h"
+--- spring_0.82.0/rts/System/Sound/SoundSource.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Sound/SoundSource.cpp	2010-07-28 13:56:55.883035545 +0200
+@@ -4,7 +4,7 @@
+ 
+ #include <climits>
+ #include <alc.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "SoundLog.h"
+ #include "SoundBuffer.h"
+--- spring_0.82.0/rts/System/Input/MouseInput.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Input/MouseInput.h	2010-07-28 13:56:55.883035545 +0200
+@@ -3,7 +3,7 @@
+ #ifndef MOUSE_INPUT_H
+ #define MOUSE_INPUT_H
+ 
+-#include <SDL_events.h>
++#include <SDL/SDL_events.h>
+ #include <boost/signals/connection.hpp>
+ 
+ #include "Vec2.h"
+--- spring_0.82.0/rts/System/Input/MouseInput.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Input/MouseInput.cpp	2010-07-28 13:56:55.886368944 +0200
+@@ -24,12 +24,12 @@
+ #include "Game/UI/MouseHandler.h"
+ 
+ #include <boost/bind.hpp>
+-#include <SDL_events.h>
++#include <SDL/SDL_events.h>
+ #include "Rendering/GlobalRendering.h"
+ #include "Rendering/GL/FBO.h"
+ #include "GlobalUnsynced.h"
+ #ifdef _WIN32
+-	#include <SDL_syswm.h>
++	#include <SDL/SDL_syswm.h>
+ 	#include "Platform/Win/win32.h"
+ 	#include "Platform/Win/wsdl.h"
+ #endif
+--- spring_0.82.0/rts/System/Input/InputHandler.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Input/InputHandler.h	2010-07-28 13:56:55.886368944 +0200
+@@ -4,7 +4,7 @@
+ #define INPUT_HANDLER_H
+ 
+ #include <boost/signals.hpp>
+-#include <SDL_events.h>
++#include <SDL/SDL_events.h>
+ 
+ /**
+  * @brief Simple thing: events go in, events come out
+--- spring_0.82.0/rts/System/Input/Joystick.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Input/Joystick.h	2010-07-28 13:56:55.886368944 +0200
+@@ -3,7 +3,7 @@
+ #ifndef JOYSTICK_H
+ #define JOYSTICK_H
+ 
+-#include <SDL_joystick.h>
++#include <SDL/SDL_joystick.h>
+ #include <boost/signals/connection.hpp>
+ 
+ union SDL_Event;
+--- spring_0.82.0/rts/System/Input/Joystick.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/Input/Joystick.cpp	2010-07-28 13:56:55.886368944 +0200
+@@ -3,7 +3,7 @@
+ #include "StdAfx.h"
+ #include "Joystick.h"
+ 
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ 
+ #include "InputHandler.h"
+ #include "ConfigHandler.h"
+--- spring_0.82.0/rts/System/SpringApp.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/SpringApp.cpp	2010-07-28 13:56:55.896368381 +0200
+@@ -6,9 +6,9 @@
+ #include <iostream>
+ 
+ #include <signal.h>
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ #if !defined(HEADLESS)
+-#include <SDL_syswm.h>
++#include <SDL/SDL_syswm.h>
+ #endif
+ 
+ #include "mmgr.h"
+--- spring_0.82.0/rts/System/NetProtocol.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/System/NetProtocol.cpp	2010-07-28 13:56:55.896368381 +0200
+@@ -12,7 +12,7 @@
+ #include "StdAfx.h"
+ #endif
+ 
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ #include <boost/scoped_ptr.hpp>
+ #include <boost/shared_ptr.hpp>
+ 
+--- spring_0.82.0/rts/Lua/LuaHandle.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Lua/LuaHandle.cpp	2010-07-28 13:56:55.909701609 +0200
+@@ -3,9 +3,9 @@
+ #include "StdAfx.h"
+ 
+ #include <string>
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Lua/LuaOpenGL.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Lua/LuaOpenGL.cpp	2010-07-28 13:56:55.943034903 +0200
+@@ -12,9 +12,9 @@
+ #include <string>
+ #include <vector>
+ #include <algorithm>
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Lua/LuaUnsyncedCtrl.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Lua/LuaUnsyncedCtrl.cpp	2010-07-28 13:56:55.959701575 +0200
+@@ -17,9 +17,9 @@
+ 
+ #include <fstream>
+ 
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/Lua/LuaUnsyncedRead.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Lua/LuaUnsyncedRead.cpp	2010-07-28 13:55:30.576376727 +0200
+@@ -9,9 +9,9 @@
+ #include <cctype>
+ using namespace std;
+ 
+-#include "SDL_timer.h"
+-#include "SDL_keysym.h"
+-#include "SDL_mouse.h"
++#include "SDL/SDL_timer.h"
++#include "SDL/SDL_keysym.h"
++#include "SDL/SDL_mouse.h"
+ 
+ #include "mmgr.h"
+ 
+--- spring_0.82.0/rts/aGui/GuiElement.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/aGui/GuiElement.h	2010-07-28 13:56:55.959701575 +0200
+@@ -4,7 +4,7 @@
+ #define GUIELEMENT_H
+ 
+ #include <list>
+-#include <SDL_events.h>
++#include <SDL/SDL_events.h>
+ 
+ namespace agui
+ {
+--- spring_0.82.0/rts/aGui/LineEdit.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/aGui/LineEdit.cpp	2010-07-28 13:55:30.576376727 +0200
+@@ -6,7 +6,7 @@
+ #include "Rendering/GL/myGL.h"
+ #include "Rendering/glFont.h"
+ #include "LogOutput.h"
+-#include "SDL_timer.h"
++#include "SDL/SDL_timer.h"
+ 
+ namespace agui
+ {
+--- spring_0.82.0/rts/aGui/List.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/aGui/List.cpp	2010-07-28 13:56:55.963035290 +0200
+@@ -3,9 +3,9 @@
+ #include "StdAfx.h"
+ #include "List.h"
+ 
+-#include <SDL_keysym.h>
+-#include <SDL_mouse.h>
+-#include <SDL_timer.h>
++#include <SDL/SDL_keysym.h>
++#include <SDL/SDL_mouse.h>
++#include <SDL/SDL_timer.h>
+ 
+ #include "Rendering/GlobalRendering.h"
+ #include "Rendering/GL/myGL.h"
+--- spring_0.82.0/rts/aGui/Gui.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/aGui/Gui.cpp	2010-07-28 13:56:55.966368761 +0200
+@@ -3,7 +3,7 @@
+ #include "Gui.h"
+ 
+ #include <boost/bind.hpp>
+-#include <SDL_events.h>
++#include <SDL/SDL_events.h>
+ 
+ #include "Rendering/GL/myGL.h"
+ #include "System/Input/InputHandler.h"
+--- spring_0.82.0/rts/Rendering/GL/myGL.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Rendering/GL/myGL.cpp	2010-07-28 13:56:55.969702196 +0200
+@@ -4,7 +4,7 @@
+ #include <string>
+ #include <ostream>
+ #include <fstream>
+-#include <SDL.h>
++#include <SDL/SDL.h>
+ #include "mmgr.h"
+ 
+ #include "myGL.h"
+--- spring_0.82.0/rts/Rendering/InMapDraw.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Rendering/InMapDraw.cpp	2010-07-28 13:55:30.583043991 +0200
+@@ -1,8 +1,8 @@
+ /* This file is part of the Spring engine (GPL v2 or later), see LICENSE.html */
+ 
+ #include "StdAfx.h"
+-#include "SDL_mouse.h"
+-#include "SDL_keyboard.h"
++#include "SDL/SDL_mouse.h"
++#include "SDL/SDL_keyboard.h"
+ #include "mmgr.h"
+ 
+ #include "InMapDraw.h"
+--- spring_0.82.0/rts/lib/gml/gmlfun.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/lib/gml/gmlfun.h	2010-07-28 13:56:55.976368432 +0200
+@@ -13,7 +13,7 @@
+ #include <set>
+ #include <map>
+ #include "LogOutput.h"
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ #include <string.h>
+ 
+ #define GML_ENABLE_DEBUG 0
+--- spring_0.82.0/rts/lib/gml/gml.h	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/lib/gml/gml.h	2010-07-28 13:56:55.979701769 +0200
+@@ -240,7 +240,7 @@
+ extern int gmlNextTickUpdate;
+ extern unsigned gmlCurrentTicks;
+ 
+-#include <SDL_timer.h>
++#include <SDL/SDL_timer.h>
+ 
+ inline unsigned gmlUpdateTicks() {
+ 	gmlNextTickUpdate = 100;
+--- spring_0.82.0/rts/lib/headlessStubs/sdlstub.c	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/lib/headlessStubs/sdlstub.c	2010-07-28 13:55:30.583043991 +0200
+@@ -5,7 +5,7 @@
+  * http://www.libsdl.org/docs/html/
+  */
+ 
+-#include "SDL.h"
++#include "SDL/SDL.h"
+ 
+ 
+ #ifdef __cplusplus
+--- spring_0.82.0/rts/Map/SM3/Sm3GroundDrawer.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Map/SM3/Sm3GroundDrawer.cpp	2010-07-28 13:56:55.983035288 +0200
+@@ -17,7 +17,7 @@
+ #include "System/GlobalUnsynced.h"
+ #include "System/ConfigHandler.h"
+ 
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ extern unsigned char *keys;
+ 
+ 
+--- spring_0.82.0/rts/Map/SM3/terrain/TerrainTexture.cpp	2010-07-27 17:41:09.000000000 +0200
++++ spring_0.82.0.new/rts/Map/SM3/terrain/TerrainTexture.cpp	2010-07-28 13:56:55.986368838 +0200
+@@ -18,7 +18,7 @@
+ #include "Lightcalc.h"
+ #include "Util.h"
+ 
+-#include <SDL_keysym.h>
++#include <SDL/SDL_keysym.h>
+ extern unsigned char *keys;
+ 
+ namespace terrain {
