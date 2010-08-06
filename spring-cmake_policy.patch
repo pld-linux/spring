@@ -1,0 +1,9 @@
+--- spring_0.82.1/CMakeLists.txt~	2010-08-05 16:30:40.000000000 +0200
++++ spring_0.82.1/CMakeLists.txt	2010-08-06 09:34:56.845621902 +0200
+@@ -1,5 +1,6 @@
+ ### Cmake 2.4 lacks some cross-compiling features and fails on windows
+ cmake_minimum_required(VERSION 2.6)
++cmake_policy(SET CMP0012 NEW)
+ project(Spring)
+ 
+ LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/rts/build/cmake")
