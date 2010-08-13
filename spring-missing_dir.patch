@@ -1,7 +1,0 @@
---- spring_0.82.1/tools/CMakeLists.txt~	2010-08-05 16:30:41.000000000 +0200
-+++ spring_0.82.1/tools/CMakeLists.txt	2010-08-06 09:39:14.405617583 +0200
-@@ -5,4 +5,3 @@
- 
- Add_Subdirectory(unitsync)
- Add_Subdirectory(DemoTool)
--Add_Subdirectory(dirchange)
