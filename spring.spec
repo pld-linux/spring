@@ -1,15 +1,12 @@
-#
-# TODO: check unpackaged files
-#
 Summary:	Powerful RTS engine
 Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.82.4
+Version:	0.82.5
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
 Source0:	http://downloads.sourceforge.net/springrts/%{name}_%{version}_src.tar.gz
-# Source0-md5:	86f7b1e6b732a3d53dbaa5fa7c191ada
+# Source0-md5:	34cbc23955d304681bec4ae48c43b015
 Patch0:		%{name}-cmake_policy.patch
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.7.2-4
@@ -25,6 +22,7 @@ BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	libxslt-progs
 BuildRequires:	p7zip
+BuildRequires:	rpmbuild(macros) >= 1.577
 BuildRequires:	which
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcursor-devel
@@ -78,8 +76,6 @@ Funkcje:
 install -d build
 cd build
 %cmake .. \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DLIBDIR=%{_lib}
 
 %{__make}
