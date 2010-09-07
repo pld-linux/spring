@@ -1,12 +1,12 @@
 Summary:	Powerful RTS engine
 Summary(pl.UTF-8):	Potężny silnik RTS
 Name:		spring
-Version:	0.82.5
+Version:	0.82.5.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games/Strategy
 Source0:	http://downloads.sourceforge.net/springrts/%{name}_%{version}_src.tar.gz
-# Source0-md5:	34cbc23955d304681bec4ae48c43b015
+# Source0-md5:	fe4f2080e6f923e37676cdfd90d7fd3c
 Patch0:		%{name}-cmake_policy.patch
 URL:		http://spring.clan-sy.com/
 BuildRequires:	DevIL-devel >= 1.7.2-4
